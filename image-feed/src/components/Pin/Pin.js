@@ -14,7 +14,7 @@ function Pin(props) {
             <div className = "pin__wrapperContainer">
             {/* <img onClick={()=>setOpen(true)} src={urls?.regular} alt="pin"/>{isOpen && 
             (<Lightbox  mainSrc={urls?.full} onCloseRequest={()=>setOpen(false)}></Lightbox>) */}
-            <img onClick={()=>props.changeView()} src={urls?.regular} alt="pin"/>
+            <img onClick={()=>props.changeView()} src={urls?.regular} alt=""/>
             
             
         </div>
