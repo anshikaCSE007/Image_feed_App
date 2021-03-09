@@ -9,7 +9,7 @@
     ##Run App:
     1.Scroll downwards to load more image.
     2.Give input in the header and press Enter to load the images relevant to the input; foreg:"Car",etc
-    3.Click on any image to open the slider; in the slider the Left and Right row can be clicked to move to previous and next image respectively.
+    3.Click on any image to open the slider; in the slider the Left and Right arrow can be clicked to move to previous and next image respectively.
     4.The cancel button (X) can be clicked to get back to the image-feed home.
     5.snapshots are provided to give an overview of the application.
    
