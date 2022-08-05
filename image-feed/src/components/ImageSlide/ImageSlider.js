@@ -4,12 +4,11 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 // import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 // import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import CancelIcon from '@material-ui/icons/Cancel';
-import { IconButton } from '@material-ui/core';
 import "./ImageSlider.css";
 
 const ImageSlider = (props) => {
   let {slides} = props;
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(props.currentIndex);
   const length = slides.length;
 
   const nextSlide = () => {
@@ -27,13 +26,10 @@ const ImageSlider = (props) => {
   return (
     <div>
     <section className='slider'>
-      
-      
       <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
       <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
-      <CancelIcon onClick={props.closeView} className="close-icon"/>
-      
-      
+      <CancelIcon onClick={props.closeView} className="close-icon"/> 
+    <div className='container'>
       {slides.map((slide, index) => {
         return (
           <div
@@ -46,6 +42,7 @@ const ImageSlider = (props) => {
           </div>
         );
       })}
+    </div>
     </section>
     </div>
   );
