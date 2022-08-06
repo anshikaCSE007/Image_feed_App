@@ -2,7 +2,6 @@
   display: inline-flex;
   padding:8px;
   position: relative;
-  /* width: 370px; */
 }
 
 .pin_wrapper::before {
@@ -21,9 +20,7 @@
   top: 10px;
   width: 100%;
   height: 100%;
-  /* background: black; */
   color: white;
-  /* margin-bottom: 5px; */
   font-family: sans-serif;
   font-size: 12px;
   visibility: hidden;
@@ -66,40 +63,16 @@
   margin-top: 0.75rem;
 }
 
-/* .contentImage {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: black;
-  color: white;
-  margin-bottom: 5px;
-  font-family: sans-serif;
-  font-size: 12px;
-  visibility: hidden;
-  -webkit-transition: visibility 0s, opacity 0.5s linear; 
-  transition: visibility 0s, opacity 0.5s linear;
-  border-radius: 4px;
-} */
-
- 
-/* .pin_wrapperContent:hover> div {
-  padding: 2px 4px;
-  visibility: visible;
-  opacity: 0.7; 
-} */
-
 .pin__wrapperContainer{
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    /* width: 236px; */
 }
 
 .pin_wrapperContent > img{
     display: flex;
     width: 100%;
     cursor: zoom-in;
-    /* border-radius: 16px; */
     object-fit: cover;
 }
 
@@ -108,64 +81,13 @@
 }
 
 .pin_wrapperContent:hover{
-  
-  /* background-color: #000;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%; */
   cursor: zoom-in;
 }
 
 .pin_wrapperContent:hover > div {
   visibility: visible;
   padding: 2px 4px;
-  /* filter:brightness(100%); */
 }
 
-/* .slider {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.image {
-  width: 1000px;
-  height: 600px;
-  border-radius: 10px;
-}
-
-.right-arrow {
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-.left-arrow {
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08); */
-/* } */
 

@@ -31,7 +31,6 @@ function App() {
   const query = searchParams.getAll('query');
   const orientation = searchParams.get('item');
 
-  console.log(query, orientation, 'queries');
   
   const increasePage =()=>{
       setPage(page+1)
@@ -70,10 +69,8 @@ function App() {
       
     })
     .catch((e)=>{
-      console.log(e.response?.data)
       setErrors(e.response?.data)
       setIsLoading(false);
-      console.log(errors)
     })
     
 
@@ -100,7 +97,6 @@ function App() {
       setNewPins(pinData)
     })
     .catch((e)=>{
-      console.log(e.response.data)
       setErrors(e.response.data)
     })
   }
@@ -110,15 +106,13 @@ function App() {
     if(isEmpty(query) && isEmpty(orientation)) {
       unsplash.get("https://api.unsplash.com/photos")
     .then((res) => {
-       console.log(res.data)
        setNewPins(res.data)
     })
     .catch((e)=>{
-      console.log(e.response.data)
       setErrors(e.response.data)
     });
     } else { 
-      const arg = !isEmpty(query) ? query : orientation;
+      const arg = !isEmpty(query) ? query[0] : orientation;
       getImages(arg).then((res)=>{
         let results = res.data.results;
         let newPins  = [
@@ -135,7 +129,6 @@ function App() {
   },[]);
 
   const getImages =(term) =>{
-    console.log(term, 'term')
     return unsplash.get("https://api.unsplash.com/search/photos",{
       params:{
         query : term,
@@ -145,8 +138,6 @@ function App() {
   }
 
   const onSearchSubmit =(term) =>{
-      console.log("onSearch submit", term)
-      
       getImages(term).then((res)=>{
         let results = res.data.results;
         let newPins  = [
@@ -164,7 +155,7 @@ function App() {
  
   return (
     <div className="app">
-      <Header onSubmit = {onSearchSubmit}/>
+      <Header onSubmit = {getNewPins}/>
       <NavBar/>
       {!searchParams.has('query') && <TopBar onSearch={getNewPins}/>}
       <Board pins={pins} loadMoreImage={loadMoreImage}/>

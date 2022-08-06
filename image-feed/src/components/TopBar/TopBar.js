@@ -43,7 +43,6 @@ function TopBar(props) {
 
   const onSearchSubmit =(e) =>{
     e.preventDefault();
-    // console.log(input)
     props.onSearch([searchInput]);
     searchParams.append('query', searchInput);
     if (searchParams.has('item')) searchParams.delete('item');
@@ -53,15 +52,12 @@ function TopBar(props) {
       search: location.search,
     })
 }
-  console.log(imageUrl)
-  console.log(location);
-  
+
   return (
     <div className="topbar">
       <img alt='' src={imageUrl.length === 0
         ? 'https://images.unsplash.com/photo-1657299170935-31e068229885?ixid=MnwyMTI5OTl8MXwxfGFsbHwxMXx8fHx8fDJ8fDE2NTk3MDY1NTU&ixlib=rb-1.2.1' : imageUrl[0].imgUrl} />
       <div className="searchWrapper">
-                    {/* <SearchOutLined></SearchOutLined> */}
       <p>ImageFeed</p>
       <span>The internet’s source of freely-usable images.Powered by creators everywhere.</span>
       <div className="searchBarWrapper">
@@ -72,11 +68,7 @@ function TopBar(props) {
           <input type="text" placeholder="Search free high-resolution photos" onChange={(e) => setSearchInput(e.target.value)}/>
           <button type="submit" onClick={onSearchSubmit}>Submit</button>
           </form>
-          
-      
-
       </div>
-
   </div>
   </div>
   )

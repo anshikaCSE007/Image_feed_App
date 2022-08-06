@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
 import "./Board.css"
+
 import Pin from "../Pin/Pin";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ImageSlider from '../ImageSlide/ImageSlider';
-// import { SRLWrapper } from "simple-react-lightbox"
+
+
 function Board(props) {
     const[view,setView] = useState(false)
     const[selectedPin, setSelectedPin] = useState(null);
@@ -18,7 +20,7 @@ function Board(props) {
         setSelectedPin(null);
     }
     let {pins} = props;
-    console.log(selectedPin, 'selectedPin')
+
     return (
         <div>
         <div className = "board__wrapper">

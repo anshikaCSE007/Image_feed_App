@@ -35,13 +35,10 @@ const NavBar = () => {
   const itemQuery = searchParams.get('item');
   const [pinned, setPinned] = useState(itemQuery);
 
-  console.log(itemQuery, 'itemQuery');
-
   useEffect(() => {
     setPinned(itemQuery)
   }, [itemQuery]);
 
-  console.log(pinned)
   return (
     <div className="navbar_wrapper">
       <a href="/" className={!pinned ? cx('menu','activeMenu') : 'menu'}>Editorials</a>

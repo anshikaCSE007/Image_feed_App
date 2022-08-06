@@ -1,20 +1,36 @@
 import React,{useState} from 'react'
-import PhotoFilterIcon from '@material-ui/icons/PhotoFilter';
+import { useLocation } from 'react-router';
+import { useNavigate } from 'react-router-dom';
+
 import "./Header.css"
+
+import PhotoFilterIcon from '@material-ui/icons/PhotoFilter';
 import { IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import FaceIcon from '@material-ui/icons/Face';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 function Header(props) {
-    const[input,setInput] = useState("")
+    const[input,setInput] = useState("");
+    const location = useLocation();
+    const history = useNavigate();
+    const searchQuery = location.search;
+    const searchParams = new URLSearchParams(searchQuery);
 
     const onSearchSubmit =(e) =>{
         e.preventDefault();
-        // console.log(input)
-        props.onSubmit(input);
-    }
+        props.onSubmit([input]);
+        if (searchParams.has('item')) searchParams.delete('item');
+        if (searchParams.has('query')) searchParams.set('query', input);
+        else searchParams.append('query', input);
+        location.search = searchParams.toString();
+        history({
+          pathname: location.pathname,
+          search: location.search,
+        })
+    };
 
     return (
         <div>
