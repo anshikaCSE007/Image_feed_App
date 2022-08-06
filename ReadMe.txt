@@ -1,4 +1,4 @@
-# Yellow Class Assignment : 
+
     ##Installation:
     1.Clone this repository using "git clone https://github.com/AnshikaCodeChef/Image_feed_App" command.
     2.Move to the path "/image-feed"
