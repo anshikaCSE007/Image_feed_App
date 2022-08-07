@@ -1,7 +1,7 @@
 .wrapper{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    height: 56px;
     padding: 12px 4px 4px 16px;
     background-color: white;
     color: black;
@@ -24,14 +24,14 @@
 
 .wrapper__homepageButton{
     display: flex;
-    height:45px;
-    min-width: 123px;
+    padding: 0.5rem 1rem;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     cursor: pointer;
     background-color: rgb(17, 17, 17);
     margin:10px;
+    font-size: 1.2vw;
 }
 
 .wrapper__homepageButton > a{
@@ -44,13 +44,13 @@
 .wrapper__followingButton{
    
     display: flex;
-    height:45px;
-    min-width: 123px;
+    padding: 0.5rem 1rem;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     cursor: pointer;
     background-color:white;
+    font-size: 1.2vw;
     
 }
 .wrapper__followingButton > a{
@@ -69,6 +69,7 @@
 .wrapper__searchWrapper{
     flex:1;
     margin: 0px 15px 0px 15px;
+    min-width: 125px;
 }
 
 .wrapper__searchBarWrapper{

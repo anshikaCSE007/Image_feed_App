@@ -5,16 +5,35 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  /* overflow: hidden; */
+  height: 72px;
 
 }
 
+.navbar_wrapper>div:nth-child(1){
+  border-right: 2px solid #a5a5a5;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.navbar_wrapper>div:nth-child(1)>a{
+  margin-right: 1rem;
+}
+
+.menuBar{
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+}
+
 .menu{
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.005vw;
   text-decoration: none;
   color: #a1a1a1;
   text-align: center;
-  font-size: 15px;
+  font-size: 1vw;
   font-family: sans-serif;
+  min-width: 10vw;
 }
 
 .menu:hover{
@@ -37,4 +56,10 @@
   color: #252525;
   font-weight: bold;
   border-bottom: 2px solid #252525;
+}
+
+.arrowIcon{
+  color: #a5a5a5;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }

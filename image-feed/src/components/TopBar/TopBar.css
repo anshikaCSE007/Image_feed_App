@@ -8,7 +8,7 @@
   width: 100%;
   height: 700px;
     object-fit: cover;
-    object-position: 80% 10%;
+    /* object-position: 80% 10%; */
 }
 
 .searchWrapper{

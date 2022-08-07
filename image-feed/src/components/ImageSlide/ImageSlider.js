@@ -3,6 +3,8 @@ import "./ImageSlider.css";
 
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import Avatar from '@mui/material/Avatar';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import CancelIcon from '@material-ui/icons/Cancel';
 import likeIcon from '../../icons/heart.svg';
@@ -39,8 +41,8 @@ const ImageSlider = (props) => {
   return (
     <div>
     <section className='slider'>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+      <ArrowBackIosIcon fontSize='large' color="disabled" className='left-arrow' onClick={prevSlide} />
+      <ArrowForwardIosIcon fontSize='large' color="disabled" className='right-arrow' onClick={nextSlide} />
       <CancelIcon onClick={props.closeView} className="close-icon"/> 
     <div className='container'>
           <div
