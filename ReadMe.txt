@@ -1,11 +1,11 @@
-# Yellow Class Assignment : 
+
     ##Installation:
     1.Clone this repository using "git clone https://github.com/AnshikaCodeChef/Image_feed_App" command.
     2.Move to the path "/image-feed"
     3.Run the command "npm i" to install all the dependencies.
     4.Run the command "npm start" in the same directory "/image-feed".
     5.The react-app will start the application at the http://localhost:3000/
-    6.The Application is deployed on netlify.com; link: "https://image-feed.netlify.app/"
+    6.The Application is deployed on netlify.com; link: "https://youthful-bassi-595fba.netlify.app/"
     ##Run App:
     1.Scroll downwards to load more image.
     2.Give input in the header and press Enter to load the images relevant to the input; foreg:"Car",etc
